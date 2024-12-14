@@ -16,7 +16,7 @@ labels = [1, 2, 3, 4, 5, 6, 7, 8]
 app = Flask(__name__)
 
 @app.route("/predictlillaessingen", methods=["POST"])
-def predict():
+def predict_lillaessingen():
     data=request.get_json()
     features = np.array(data['features']).reshape(1, -1)  
     prediction = model_lillaessingen.predict(features) 
@@ -27,7 +27,7 @@ def predict():
     return jsonify(response)
 
 @app.route("/predicthornsg", methods=["POST"])
-def predict():
+def predict_hornsgatan():
     data=request.get_json()
     features = np.array(data['features']).reshape(1, -1)  
     prediction = model_hornsgatan.predict(features) 
@@ -38,7 +38,7 @@ def predict():
     return jsonify(response)
 
 @app.route("/predictsteriks", methods=["POST"])
-def predict():
+def predict_steriks():
     data=request.get_json()
     features = np.array(data['features']).reshape(1, -1)  
     prediction = model_steriks.predict(features) 
@@ -49,7 +49,7 @@ def predict():
     return jsonify(response)
 
 @app.route("/predictsveav", methods=["POST"])
-def predict():
+def predict_sveav():
     data=request.get_json()
     features = np.array(data['features']).reshape(1, -1)  
     prediction = model_sveav.predict(features) 
@@ -60,7 +60,7 @@ def predict():
     return jsonify(response)
 
 @app.route("/predicttorkel", methods=["POST"])
-def predict():
+def predict_torkel():
     data=request.get_json()
     features = np.array(data['features']).reshape(1, -1)  
     prediction = model_torkel.predict(features) 
