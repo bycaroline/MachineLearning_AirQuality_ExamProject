@@ -5,47 +5,29 @@ import carolineeklund.airquality.model.PredictionRecord;
 import carolineeklund.airquality.repository.PredictionRepository;
 import org.json.JSONObject;
 import org.springframework.boot.SpringApplication;
-import org.springframework.context.ApplicationContext;
+package carolineeklund.airquality.service;
+import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.Scanner;
 
 @Service
 public class PredictionService {
 
-//    private final PredictionRepository predictionRepository;
-//
-//    public PredictionService(PredictionRepository predictionRepository) {
-//        this.predictionRepository = predictionRepository;
-//    }
 
-//    public PredictionRecord createPredictionRecord(PredictionRecord predictionRecord) {
-//        return predictionRepository.save(predictionRecord);
-//    }
-
-    public Integer getPrediction (int[] featuresInt){
+    public Integer getPrediction (int[] featuresInt, String endpoint) {
         try {
-//            ApplicationContext context = SpringApplication.run(AirqualityApplication.class, args);
-//            PredictionService predictionService = context.getBean(PredictionService.class);
             HttpClient client = HttpClient.newHttpClient();
-//            Scanner scan = new Scanner(System.in);
-
-//            System.out.println("Enter the value of the feature: ");
-//            int feature = scan.nextInt();
-//            int feature2 = scan.nextInt();
-
-//            int [] featuresInt = {feature, feature2};
 
             JSONObject jsonData = new JSONObject();
             jsonData.put("features", featuresInt);
             System.out.println("JsonData: " + jsonData);
 
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create("http://127.0.0.1:5000/predict"))
+                    .uri(URI.create(endpoint))
                     .header("Content-Type", "application/json")
                     .POST(HttpRequest.BodyPublishers.ofString(jsonData.toString()))
                     .build();
@@ -56,8 +38,8 @@ public class PredictionService {
             System.out.println("Response Body: " + response.body());
 
             JSONObject jsonResponse = new JSONObject(response.body());
-            int prediction = jsonResponse.getJSONArray("prediction").getInt(0);
-            System.out.println("prediction" + prediction);
+            int prediction = jsonResponse.getJSONArray("categorized_prediction").getInt(0);
+            System.out.println("categorized_prediction" + prediction);
             return prediction;
         } catch(Exception e){
             System.out.println("Error: " + e);
@@ -65,5 +47,29 @@ public class PredictionService {
         }
     }
 
+    public Integer getPredictionLillaEssingen (int[] featuresInt){
+        String endpoint = "http://127.0.0.1:5000/predictlillaessingen";
+        return getPrediction(featuresInt, endpoint);
+    }
 
+    public Integer getPredictionHornsg (int[] featuresInt){
+        String endpoint = "http://127.0.0.1:5000/predicthornsg";
+        return getPrediction(featuresInt, endpoint);
+    }
+
+    public Integer getPredictionStEriks (int[] featuresInt){
+        String endpoint = "http://127.0.0.1:5000/predictsteriks";
+        return getPrediction(featuresInt, endpoint);
+    }
+
+    public Integer getPredictionSveav (int[] featuresInt){
+        String endpoint = "http://127.0.0.1:5000/predictsveav";
+        return getPrediction(featuresInt, endpoint);
+    }
+
+    public Integer getPredictionTorkel (int[] featuresInt){
+        String endpoint = "http://127.0.0.1:5000/predicttorkel";
+        return getPrediction(featuresInt, endpoint);
+    }
 }
+
