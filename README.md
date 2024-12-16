@@ -7,10 +7,10 @@ The machine learning model is built in Jupyter Notebooks using Python, Pandas, N
 
 
 ## Features
-Prediction of air quality with Machine Learning 
-Flask API, Python Backend
-Java server
-React frontend
+- Prediction of air quality with Machine Learning 
+- Flask API, Python Backend
+- Java server
+- React frontend
 
 ## Technologies
 - Python
