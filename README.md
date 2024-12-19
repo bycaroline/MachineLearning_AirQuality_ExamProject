@@ -11,7 +11,7 @@ The system workflow begins in the frontend, where user input triggers a request.
 - Java server
 - React frontend
 
-#### Technologies and Frameworks
+## Technologies and Frameworks
 
 - **Programming Languages**: Python, Java, JavaScript
 - **IDEs**: Jupyter Notebook, IntelliJ, VSCode
