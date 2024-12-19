@@ -11,18 +11,12 @@ The system workflow begins in the frontend, where user input triggers a request.
 - Java server
 - React frontend
 
-## Technologies and Frameworks
-- Python
-- Jupyter
-- Pandas
-- SciKit Learn
-- NumPy
-- Joblib
-- Java
-- Javascript
-- HTML
-- CSS
-- React 
+#### Technologies and Frameworks
+
+- **Programming Languages**: Python, Java, JavaScript
+- **IDEs**: Jupyter Notebook, IntelliJ, VSCode
+- **Libraries**: Pandas, NumPy, SciKit Learn, Joblib
+- **Frontend**: React JS, HTML, CSS
 
 ## Licens
 Caroline Eklund holds the license.
