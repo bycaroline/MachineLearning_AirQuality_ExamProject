@@ -1,26 +1,28 @@
 # Exam Project in Machine Learning, Java and React
 
 ## Description
-The purpose of this Exam project is to learn and understand how machine learning works, as well as to apply knowledge in Python and integrate it with Java and React. The product is a service that predicts and estimates air quality in a specific part of Stockholm's inner city. Users simply enter a time of day and select a location within Stockholm's inner city in the browser, and they receive an estimation of the air quality for that time and place.
+This project aims to explore how machine learning works while applying Python skills and integrating them with Java and React. The outcome is a service that predicts and estimates air quality in specific areas of Stockholm's inner city. Users enter a time of day and select a location within Stockholm via a browser, receiving an estimated air quality forecast for their chosen time and place.
 
-When the frontend receives an input and sends a request, it passes through the Java server, which forwards the request to a Flask API. The API utilizes the saved model in the joblib file and sends a response back, first to the Java server and then to the frontend client. The user can then read the response and see the estimated air quality. The machine learning model is built in Jupyter Notebooks using Python, Pandas, NumPy, and SciKit Learn.
-
+The system workflow begins in the frontend, where user input triggers a request. This request is sent to a Java server, which then forwards it to a Flask API. The API leverages a pre-trained machine learning model stored in a joblib file to process the input and generate a prediction. The response is routed back through the Java server to the frontend client, where users can view the estimated air quality. The machine learning model is developed using Python, with tools such as Jupyter Notebooks, Pandas, NumPy, and SciKit Learn.
 
 ## Features
 - Prediction of air quality with Machine Learning 
-- Flask API, Python Backend
+- Flask API
 - Java server
 - React frontend
 
-## Technologies
+## Technologies and Frameworks
 - Python
+- Jupyter
 - Pandas
 - SciKit Learn
+- NumPy
+- Joblib
 - Java
 - Javascript
 - HTML
 - CSS
-- React JS
+- React 
 
 ## Licens
 Caroline Eklund holds the license.
