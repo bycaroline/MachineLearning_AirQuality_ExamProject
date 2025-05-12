@@ -35,5 +35,5 @@ The data is gathered from Naturvårdsverket (https://www.naturvardsverket.se/) o
 Caroline Eklund holds the license.
 
 ## Contact
-If you have any questions or suggestions, feel free to reach out to me at eklund.caroline@gmail.com.
+If you have any questions or suggestions, feel free to reach out to me at: eklund.caroline@gmail.com.
 
